@@ -1,16 +1,21 @@
+<app-cd-counter></app-cd-counter>
+
 <p *ngIf="!(symbols$ | async)">
   lade Wertpapiere...
 </p>
 
-<div *ngIf="symbols$ | async">
-  <h2>Wertpapiere</h2>
-  <p *ngFor="let symbol of symbols$ | async">
-    {{symbol.symbol}}: {{symbol.name}}
-  </p>
+<div class="row" *ngIf="symbols$ | async">
+  <div class="col-sm">
+    <h2>Wertpapiere</h2>
+    <p *ngFor="let symbol of symbols$ | async">
+      {{symbol.symbol}}: {{symbol.name}}
+    </p>
+  </div>
 
-  <h2>Preise</h2>
-  <p *ngFor="let quote of quotes$ | async">
-    {{quote.symbol}}: {{quote.latestPrice}}
-  </p>
+  <div class="col-sm">
+    <h2>Preise</h2>
+    <p *ngFor="let quote of quotes$ | async">
+      {{quote.symbol}}: {{quote.latestPrice}}
+    </p>
+  </div>
 </div>
-
