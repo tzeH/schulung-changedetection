@@ -20,8 +20,9 @@ export class WertpapierListeComponent {
     this.symbols$ = stocksService.getSymbols()
       .pipe(
         concatAll(),
-        take(5),
-        toArray()
+        take(3),
+        toArray(),
+        shareReplay()
       );
 
     this.quotes$ = this.symbols$.pipe(

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CdCounterComponent } from './cd-counter/cd-counter.component';
 import { StocksApiModule } from './stocks-api/stocks-api.module';
 import { WertpapierListeComponent } from './wertpapier-liste/wertpapier-liste.component';
+import { WertpapierEintragComponent } from './wertpapier-eintrag/wertpapier-eintrag.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WertpapierListeComponent,
-    CdCounterComponent
+    CdCounterComponent,
+    WertpapierEintragComponent
   ],
   imports: [
     BrowserModule,

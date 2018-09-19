@@ -1,4 +1,4 @@
-<app-cd-counter></app-cd-counter>
+<app-cd-counter name="wertpapier-liste"></app-cd-counter>
 
 <p *ngIf="!(symbols$ | async)">
   lade Wertpapiere...
@@ -8,7 +8,7 @@
   <div class="col-sm">
     <h2>Wertpapiere</h2>
     <p *ngFor="let symbol of symbols$ | async">
-      {{symbol.symbol}}: {{symbol.name}}
+      <app-wertpapier-eintrag [symbolInfo]="symbol"></app-wertpapier-eintrag>
     </p>
   </div>
 

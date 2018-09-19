@@ -17,10 +17,6 @@ import {
   selector: 'app-cd-counter',
   templateUrl: './cd-counter.component.html',
   styleUrls: ['./cd-counter.component.scss'],
-  // tslint:disable-next-line:use-host-property-decorator
-  /*  host: {
-      'class': 'fixed-top'
-    }*/
 })
 export class CdCounterComponent implements OnInit, OnChanges, OnDestroy, DoCheck,
   AfterViewInit, AfterViewChecked, AfterContentInit, AfterContentChecked {
@@ -29,6 +25,8 @@ export class CdCounterComponent implements OnInit, OnChanges, OnDestroy, DoCheck
    Hier kann ein input gesetzt werden, damit auch OnChanges() analysiert werden kann.
    */
   @Input() countedInput: any;
+
+  @Input() name = '';
 
   /*
   CSS-Positionierung der counter
@@ -118,7 +116,7 @@ export class CdCounterComponent implements OnInit, OnChanges, OnDestroy, DoCheck
   }
 
   private loggeAufruf() {
-    console.log(this.aufrufe[this.aufrufe.length - 1]);
+    console.log(this.name + ': ' + this.aufrufe[this.aufrufe.length - 1]);
   }
 
 }
