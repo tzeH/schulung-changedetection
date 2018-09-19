@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { concatAll, concatMap, filter, toArray, share, shareReplay } from 'rxjs/operators';
+import { concatAll, concatMap, filter, toArray, share, shareReplay, take, mergeMap } from 'rxjs/operators';
 
 import { QuoteInfo, SymbolInfo } from '../stocks-api/stocks-types';
 import { StocksService } from '../stocks-api/stocks.service';
@@ -17,11 +17,18 @@ export class WertpapierListeComponent {
   readonly quotes$: Observable<QuoteInfo[]>;
 
   constructor(stocksService: StocksService) {
-    this.symbols$ = stocksService.getSymbols();
+    this.symbols$ = stocksService.getSymbols()
+      .pipe(
+        concatAll(),
+        take(5),
+        toArray()
+      );
 
-    this.quotes$ = of([
-      <any>{ symbol: 'FOO', latestPrice: '13.37' } as QuoteInfo
-    ]);
+    this.quotes$ = this.symbols$.pipe(
+      concatAll(),
+      mergeMap(s => stocksService.getQuote(s.symbol)),
+      toArray()
+    );
   }
 
 }

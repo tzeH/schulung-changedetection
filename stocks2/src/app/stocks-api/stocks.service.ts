@@ -12,5 +12,6 @@ export abstract class StocksService {
 
   protected getLogPipe<T>(url: string) {
     return tap<T>();
+    // return tap<T>(x => console.log(`LOG url=${url}`, x));
   }
 }
