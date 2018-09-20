@@ -1,9 +1,5 @@
 <app-cd-counter name="wertpapier-liste"></app-cd-counter>
 
-<p *ngIf="!(symbols$ | async)">
-  lade Wertpapiere...
-</p>
-
 <div class="row" *ngIf="symbols$ | async">
   <div class="col-sm">
     <h2>Wertpapiere</h2>
