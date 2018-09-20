@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -8,8 +8,7 @@ import { StocksService } from '../stocks-api/stocks.service';
 @Component({
   selector: 'app-preis-eintrag',
   templateUrl: './preis-eintrag.component.html',
-  styleUrls: ['./preis-eintrag.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./preis-eintrag.component.scss']
 })
 export class PreisEintragComponent implements OnChanges {
 
