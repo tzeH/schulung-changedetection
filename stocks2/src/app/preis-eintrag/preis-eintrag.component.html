@@ -1,0 +1,6 @@
+<div style="position: relative">
+  <app-cd-counter name="preis-eintrag" [countedInput]="symbolInfo"></app-cd-counter>
+  <!-- {{symbolInfo.symbol}}: {{getQuote(symbolInfo.symbol) | async}} -->
+  {{symbolInfo.symbol}}: {{latestPrice$ | async}}
+  <!-- {{symbolInfo.symbol}}: {{latestPrice}} -->
+</div>

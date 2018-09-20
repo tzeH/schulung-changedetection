@@ -14,8 +14,8 @@
 
   <div class="col-sm">
     <h2>Preise</h2>
-    <p *ngFor="let quote of quotes$ | async">
-      {{quote.symbol}}: {{quote.latestPrice}}
+    <p *ngFor="let symbol of symbols$ | async">
+      <app-preis-eintrag [symbolInfo]="symbol"></app-preis-eintrag>
     </p>
   </div>
 </div>

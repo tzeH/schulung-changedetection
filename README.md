@@ -10,3 +10,11 @@ A) Warum ist der Wert des globalen Zählers (ganz oben rechts in der Ecke) grö�
 B) Warum werden alle Zähler der Wertpapiere gemeinsam hochgezählt?
 
 Tipp: Der Tooltip an den Countern führt zu einem Change-Detection Zyklus.
+
+Aufgabe 2:
+Vereinfacht die Change-Detection mit der OnPush-Strategie.
+
+Aufgabe 3:
+In "preis-eintrag.component.html" findet ihr drei Code-Varianten.
+Welche davon funktionieren mit der OnPush-Strategie und welche nicht (und warum)?
+

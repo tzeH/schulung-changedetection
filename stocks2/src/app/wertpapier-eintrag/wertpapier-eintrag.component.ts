@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 import { SymbolInfo } from '../stocks-api/stocks-types';
 
 @Component({
@@ -6,11 +7,8 @@ import { SymbolInfo } from '../stocks-api/stocks-types';
   templateUrl: './wertpapier-eintrag.component.html',
   styleUrls: ['./wertpapier-eintrag.component.scss']
 })
-export class WertpapierEintragComponent implements OnInit {
+export class WertpapierEintragComponent {
 
   @Input() symbolInfo: SymbolInfo;
-
-  ngOnInit() {
-  }
 
 }

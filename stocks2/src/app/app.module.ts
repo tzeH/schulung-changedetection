@@ -8,6 +8,7 @@ import { CdCounterComponent } from './cd-counter/cd-counter.component';
 import { StocksApiModule } from './stocks-api/stocks-api.module';
 import { WertpapierListeComponent } from './wertpapier-liste/wertpapier-liste.component';
 import { WertpapierEintragComponent } from './wertpapier-eintrag/wertpapier-eintrag.component';
+import { PreisEintragComponent } from './preis-eintrag/preis-eintrag.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { WertpapierEintragComponent } from './wertpapier-eintrag/wertpapier-eint
     AppComponent,
     WertpapierListeComponent,
     CdCounterComponent,
-    WertpapierEintragComponent
+    WertpapierEintragComponent,
+    PreisEintragComponent
   ],
   imports: [
     BrowserModule,
