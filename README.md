@@ -18,3 +18,10 @@ Aufgabe 3:
 In "preis-eintrag.component.html" findet ihr drei Code-Varianten.
 Welche davon funktionieren mit der OnPush-Strategie und welche nicht (und warum)?
 
+Aufgabe 4:
+In "cd-counter.component.html" ist etwas auskommentiert. Wenn man das einkommentiert bekommt man "ExpressionChangedAfterItHasBeenCheckedError"s.
+
+A) Wieso ist das so?
+B) Warum ist der angezeigte Wert in der roten Badge immer einen niedriger als die anderen?
+c) Was könnte man tun, um den Fehler loszuwerden?
+
