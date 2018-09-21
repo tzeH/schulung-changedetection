@@ -22,4 +22,3 @@ In "cd-counter.component.html" ist etwas auskommentiert. Wenn man das einkomment
  * A) Wieso ist das so?
  * B) Warum ist der angezeigte Wert in der roten Badge immer einen niedriger als die anderen?
  * c) Was könnte man tun, um den Fehler loszuwerden?
-
