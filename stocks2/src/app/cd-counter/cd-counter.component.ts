@@ -3,6 +3,7 @@ import {
   AfterContentInit,
   AfterViewChecked,
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   OnChanges,
   OnDestroy,
@@ -71,6 +72,9 @@ export class CdCounterComponent implements OnInit, OnChanges, OnDestroy, DoCheck
     return '' + this.afterContentChecked + (this.afterContentInit > 0 ? 'i' : '');
   }
 
+  constructor(private cd: ChangeDetectorRef) {
+  }
+
   /*
   * Ab hier werden alle Lifecycle-Hooks nur noch protokolliert
   */
@@ -105,11 +109,13 @@ export class CdCounterComponent implements OnInit, OnChanges, OnDestroy, DoCheck
   ngAfterViewInit(): void {
     this.aufrufe.push('ngAfterViewInit');
     this.loggeAufruf();
+    // this.cd.detectChanges();
   }
 
   ngAfterViewChecked(): void {
     this.aufrufe.push('ngAfterViewChecked');
     this.loggeAufruf();
+    // this.cd.detectChanges();
   }
 
   ngAfterContentInit(): void {
