@@ -76,6 +76,13 @@ export class CdCounterComponent implements OnInit, OnChanges, OnDestroy, DoCheck
   */
 
   ngOnChanges(changes: SimpleChanges): void {
+    // Wir zählen nur diesen einen Input als echte Veränderung,
+    // damit man auch sowas sehen kann wie "0" onChanges.
+
+    if (!changes.countedInput) {
+      return;
+    }
+
     this.aufrufe.push('ngOnChanges ' + Object.keys(changes));
     this.loggeAufruf();
   }
